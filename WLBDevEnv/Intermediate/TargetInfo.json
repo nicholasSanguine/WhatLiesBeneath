@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "WLBDevEnv",
+			"Path": "C:\\Users\\reepe\\Desktop\\WLBRepo\\WhatLiesBeneath\\WLBDevEnv\\Source\\WLBDevEnv.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "WLBDevEnvEditor",
+			"Path": "C:\\Users\\reepe\\Desktop\\WLBRepo\\WhatLiesBeneath\\WLBDevEnv\\Source\\WLBDevEnvEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

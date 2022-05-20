@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\WLBDevEnv.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{82729EED-3980-4B68-8C68-CCCA0903931C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\WLBDevEnv.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\WLBDevEnvEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{F684A35A-BCDC-4471-B076-1CC42B1BDC91}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\WLBDevEnv">
+      <UniqueIdentifier>{154E995C-D4F9-4CFC-A5B7-BD616F414DC1}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\WLBDevEnv\WLBDevEnv.Build.cs">
+      <Filter>Source\WLBDevEnv</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\WLBDevEnv\WLBDevEnv.cpp">
+      <Filter>Source\WLBDevEnv</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WLBDevEnv\WLBDevEnv.h">
+      <Filter>Source\WLBDevEnv</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WLBDevEnv\WLBDevEnvCharacter.cpp">
+      <Filter>Source\WLBDevEnv</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WLBDevEnv\WLBDevEnvCharacter.h">
+      <Filter>Source\WLBDevEnv</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WLBDevEnv\WLBDevEnvGameMode.cpp">
+      <Filter>Source\WLBDevEnv</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WLBDevEnv\WLBDevEnvGameMode.h">
+      <Filter>Source\WLBDevEnv</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WLBDevEnv\WLBDevEnvHUD.cpp">
+      <Filter>Source\WLBDevEnv</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WLBDevEnv\WLBDevEnvHUD.h">
+      <Filter>Source\WLBDevEnv</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WLBDevEnv\WLBDevEnvProjectile.cpp">
+      <Filter>Source\WLBDevEnv</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WLBDevEnv\WLBDevEnvProjectile.h">
+      <Filter>Source\WLBDevEnv</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
