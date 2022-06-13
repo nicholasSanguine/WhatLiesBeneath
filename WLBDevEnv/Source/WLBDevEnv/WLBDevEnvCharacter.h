@@ -61,8 +61,12 @@ public:
 	/** Sound to play on Flashlight Click*/
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Gameplay)
 	USoundBase* FlashSound;
+	/* On Spray Sound*/
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category=Gameplay)
 	USoundBase* SpraySound;
+
+	
+
 	/** AnimMontage to play later on maybe */
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	//UAnimMontage* FireAnimation;
@@ -94,6 +98,9 @@ protected:
 
 	
 protected:
+	/*
+	 * Make the on tick function through here to degrade battery. Or do a battery check in general.
+	 */
 	// APawn interface
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
 	// End of APawn interface
