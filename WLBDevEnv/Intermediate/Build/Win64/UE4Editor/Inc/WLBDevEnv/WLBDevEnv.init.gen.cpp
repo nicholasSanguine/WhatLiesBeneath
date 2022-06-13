@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeWLBDevEnv_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xA59D2C5E,
+				0x568EA14D,
 				0x01774869,
 				METADATA_PARAMS(nullptr, 0)
 			};

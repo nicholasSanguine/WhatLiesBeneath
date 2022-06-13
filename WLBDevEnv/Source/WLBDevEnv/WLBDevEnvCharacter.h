@@ -40,6 +40,11 @@ protected:
 	virtual void BeginPlay();
 
 public:
+
+	UPROPERTY(EditAnywhere, Category=Flashlight)
+	bool FlashOn;
+	UPROPERTY(EditAnywhere, Category=Flashlight)
+	float batteryLife;
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(EditAnywhere, Category=Camera)
 	float BaseTurnRate;
@@ -47,7 +52,7 @@ public:
 	/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */
 	UPROPERTY(EditAnywhere, Category=Camera)
 	float BaseLookUpRate;
-
+	
 	/** We repurpose this for the flashlight */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Gameplay)
 	FVector GunOffset;
@@ -56,20 +61,23 @@ public:
 	/** Sound to play on Flashlight Click*/
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Gameplay)
 	USoundBase* FlashSound;
-
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category=Gameplay)
+	USoundBase* SpraySound;
 	/** AnimMontage to play later on maybe */
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	//UAnimMontage* FireAnimation;
 
 protected:
 	
-	/** Fires a projectile. */
-	void OnFire();
-
+	/** Toggle Flashlight */
+	void OnFlash();
+	/*Check if we can spray then spray*/
+	void OnSpray();
+	
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
 
-	/** Handles stafing movement, left and right */
+	/** Handles strafing movement, left and right */
 	void MoveRight(float Val);
 
 	/**

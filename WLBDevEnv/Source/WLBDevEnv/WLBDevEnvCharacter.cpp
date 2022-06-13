@@ -4,10 +4,12 @@
 #include "WLBDevEnvProjectile.h"
 #include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
+#include "Chaos/ChaosDebugDraw.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
 #include "GameFramework/InputSettings.h"
 #include "Kismet/GameplayStatics.h"
+#include "Windows/LiveCodingServer/Public/ILiveCodingServer.h"
 
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
@@ -71,8 +73,10 @@ void AWLBDevEnvCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
-	// Bind fire event
-	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AWLBDevEnvCharacter::OnFire);
+	// Bind Flash event
+	PlayerInputComponent->BindAction("Flash", IE_Pressed, this, &AWLBDevEnvCharacter::OnFlash);
+	// Bind Spray event
+	PlayerInputComponent->BindAction("Spray",IE_Pressed, this, &AWLBDevEnvCharacter::OnSpray );
 
 	// Bind movement events
 	PlayerInputComponent->BindAxis("MoveForward", this, &AWLBDevEnvCharacter::MoveForward);
@@ -87,13 +91,35 @@ void AWLBDevEnvCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AWLBDevEnvCharacter::LookUpAtRate);
 }
 
-void AWLBDevEnvCharacter::OnFire()
+void AWLBDevEnvCharacter::OnSpray()
 {
+	// try and play the sound if specified
+	if (SpraySound != nullptr)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, SpraySound, GetActorLocation());
+	}
+}
 
+
+void AWLBDevEnvCharacter::OnFlash()
+{
 	// try and play the sound if specified
 	if (FlashSound != nullptr)
 	{
 		UGameplayStatics::PlaySoundAtLocation(this, FlashSound, GetActorLocation());
+		if(!FlashOn)
+		{
+			if(batteryLife > 0.0f)
+			{
+				GEngine->AddOnScreenDebugMessage(-1,5.f, FColor::Emerald,TEXT("Clap On"));
+				FlashOn = true;
+			}	
+		}
+		else
+		{
+			GEngine->AddOnScreenDebugMessage(-1,5.f, FColor::Blue,TEXT("flashOff"));
+			FlashOn = !FlashOn;
+		}
 	}
 
 	/*// try and play a firing animation if specified

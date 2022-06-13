@@ -48,6 +48,15 @@ void EmptyLinkFunctionForGeneratedCodeWLBDevEnvCharacter() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FirstPersonCameraComponent;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FlashOn_MetaData[];
+#endif
+		static void NewProp_FlashOn_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_FlashOn;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_batteryLife_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_batteryLife;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseTurnRate_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseTurnRate;
@@ -63,6 +72,10 @@ void EmptyLinkFunctionForGeneratedCodeWLBDevEnvCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FlashSound_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FlashSound;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SpraySound_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SpraySound;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -110,6 +123,24 @@ void EmptyLinkFunctionForGeneratedCodeWLBDevEnvCharacter() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_FirstPersonCameraComponent = { "FirstPersonCameraComponent", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWLBDevEnvCharacter, FirstPersonCameraComponent), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_FirstPersonCameraComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_FirstPersonCameraComponent_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_FlashOn_MetaData[] = {
+		{ "Category", "Flashlight" },
+		{ "ModuleRelativePath", "WLBDevEnvCharacter.h" },
+	};
+#endif
+	void Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_FlashOn_SetBit(void* Obj)
+	{
+		((AWLBDevEnvCharacter*)Obj)->FlashOn = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_FlashOn = { "FlashOn", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AWLBDevEnvCharacter), &Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_FlashOn_SetBit, METADATA_PARAMS(Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_FlashOn_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_FlashOn_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_batteryLife_MetaData[] = {
+		{ "Category", "Flashlight" },
+		{ "ModuleRelativePath", "WLBDevEnvCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_batteryLife = { "batteryLife", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWLBDevEnvCharacter, batteryLife), METADATA_PARAMS(Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_batteryLife_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_batteryLife_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_BaseTurnRate_MetaData[] = {
 		{ "Category", "Camera" },
 		{ "Comment", "/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */" },
@@ -145,14 +176,24 @@ void EmptyLinkFunctionForGeneratedCodeWLBDevEnvCharacter() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_FlashSound = { "FlashSound", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWLBDevEnvCharacter, FlashSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_FlashSound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_FlashSound_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_SpraySound_MetaData[] = {
+		{ "Category", "Gameplay" },
+		{ "ModuleRelativePath", "WLBDevEnvCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_SpraySound = { "SpraySound", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWLBDevEnvCharacter, SpraySound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_SpraySound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_SpraySound_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWLBDevEnvCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_Mesh1P,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_FP_Gun,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_FirstPersonCameraComponent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_FlashOn,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_batteryLife,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_BaseTurnRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_BaseLookUpRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_GunOffset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_FlashSound,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWLBDevEnvCharacter_Statics::NewProp_SpraySound,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AWLBDevEnvCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AWLBDevEnvCharacter>::IsAbstract,
@@ -181,7 +222,7 @@ void EmptyLinkFunctionForGeneratedCodeWLBDevEnvCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AWLBDevEnvCharacter, 4241261055);
+	IMPLEMENT_CLASS(AWLBDevEnvCharacter, 133575409);
 	template<> WLBDEVENV_API UClass* StaticClass<AWLBDevEnvCharacter>()
 	{
 		return AWLBDevEnvCharacter::StaticClass();
